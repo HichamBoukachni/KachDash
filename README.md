@@ -31,7 +31,7 @@ Track your **trading performance, risk metrics, and profitability** with automat
 
 ```bash
 git clone https://github.com/HichamBoukachni/KachDash.git
-cd trading-dashboard
+cd KachDash
 npm install
 npm run dev
 
