@@ -1,0 +1,146 @@
+{
+  "name": "Trade",
+  "type": "object",
+  "properties": {
+    
+    "ticket": {
+      "type": "string",
+      "description": "Trade ticket/ID number"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Trading symbol/ticker (e.g. EURUSD)"
+    },
+    "entry_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Entry date and time"
+    },
+    "exit_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Exit date and time"
+    },
+    "side": {
+      "type": "string",
+      "enum": ["long", "short", "buy", "sell"],
+      "description": "Trade direction"
+    },
+    "entry_price": {
+      "type": "number",
+      "description": "Entry price"
+    },
+    "exit_price": {
+      "type": "number",
+      "description": "Exit price"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Position size, volume, or number of contracts"
+    },
+
+    
+    "profit_loss": {
+      "type": "number",
+      "description": "Profit or loss from the trade (in USD)"
+    },
+    "commission": {
+      "type": "number",
+      "description": "Trading commissions or broker fees"
+    },
+    "swap": {
+      "type": "number",
+      "description": "Swap or overnight financing fees"
+    },
+    "pips": {
+      "type": "number",
+      "description": "Number of pips gained or lost in the trade"
+    },
+
+    
+    "stop_loss": {
+      "type": "number",
+      "description": "Stop loss price level"
+    },
+    "take_profit": {
+      "type": "number",
+      "description": "Take profit price level"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "description": "Trade duration in seconds"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Any personal notes or comments about the trade"
+    },
+    "strategy": {
+      "type": "string",
+      "description": "Trading strategy or setup used for this trade"
+    },
+    "bias_direction": {
+      "type": "string",
+      "description": "Bias or market direction (e.g. bullish, bearish)"
+    },
+
+   
+    "used_ote": {
+      "type": "boolean",
+      "description": "Indicates if the trade used OTE entry concept"
+    },
+    "ote_level": {
+      "type": "number",
+      "description": "OTE Fibonacci retracement level (0.62, 0.67, 0.705, 0.75, 0.79)"
+    },
+    "used_fvg": {
+      "type": "boolean",
+      "description": "Used Fair Value Gap (FVG)"
+    },
+    "used_ob": {
+      "type": "boolean",
+      "description": "Used Order Block (OB)"
+    },
+    "used_mb": {
+      "type": "boolean",
+      "description": "Used Mitigation Block (MB)"
+    },
+    "used_bb": {
+      "type": "boolean",
+      "description": "Used Breaker Block (BB)"
+    },
+
+    "sl_09": {
+      "type": "boolean",
+      "description": "Stop loss set near 0.9 retracement"
+    },
+    "sl_095": {
+      "type": "boolean",
+      "description": "Stop loss set near 0.95 retracement"
+    },
+    "sl_10": {
+      "type": "boolean",
+      "description": "Stop loss set near 1.0 retracement"
+    },
+
+    
+    "risk_usd": {
+      "type": "number",
+      "description": "Risk per trade in USD (amount you were willing to lose)"
+    },
+    "risk_pct": {
+      "type": "number",
+      "description": "Risk per trade as a percentage of account balance"
+    },
+    "rr_ratio": {
+      "type": "number",
+      "description": "Calculated Risk-to-Reward ratio (profit_loss / risk_usd)"
+    }
+  },
+  "required": [
+    "symbol",
+    "entry_date",
+    "side",
+    "entry_price",
+    "profit_loss"
+  ]
+}
