@@ -50,7 +50,7 @@ export default function Guide() {
       {/* Download button */}
       <div className="mb-8">
         <a
-          href="/Trading%20Journals/Template.xlsx"
+          href="/Template.xlsx"
           download
           className="px-5 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold shadow-md transition"
         >
