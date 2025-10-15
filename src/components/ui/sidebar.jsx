@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { LayoutDashboard, Upload, BarChart3 } from "lucide-react";
+import { BookOpen } from "lucide-react";
+
 
 // 🧱 Sidebar wrapper med korrekt flex-styling
 function Sidebar({ children, className = "" }) {
@@ -139,6 +141,15 @@ function AppSidebar() {
                 Advanced Stats
               </Link>
             </SidebarMenuItem>
+            <SidebarMenuItem>
+              <Link
+                to="/guide"
+                className={linkClass("/guide")}
+              >
+                <BarChart3 className="w-4 h-4" />
+                How to Use
+              </Link>
+            </SidebarMenuItem>  
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>

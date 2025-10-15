@@ -5,6 +5,7 @@ import Layout from "./pages/Layout.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Upload from "./pages/Upload.jsx";
 import AdvancedStats from "./pages/AdvancedStats.jsx";
+import Guide from "./pages/Guide";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="upload" element={<Upload />} />
           <Route path="advanced-stats" element={<AdvancedStats />} />
+          <Route path="guide" element={<Guide />} />
         </Route>
       </Routes>
     </BrowserRouter>
