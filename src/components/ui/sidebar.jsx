@@ -146,7 +146,7 @@ function AppSidebar() {
                 to="/guide"
                 className={linkClass("/guide")}
               >
-                <BarChart3 className="w-4 h-4" />
+                <BookOpen className="w-4 h-4" />
                 How to Use
               </Link>
             </SidebarMenuItem>  
